@@ -31,6 +31,14 @@
             <uses-permission android:name="android.permission.USB_PERMISSION" />
             <uses-permission android:name="android.permission.USE_FINGERPRINT" />
             <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+            
+            <application>
+                <intent-filter>
+                    <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+                </intent-filter>
+                <meta-data android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" android:resource="@xml/device_filter" />
+            </application>
+            
         </config-file>
 
         <source-file src="src/android/EntelPlugin.java" target-dir="src/pt/wingman/entel/plugin" />
