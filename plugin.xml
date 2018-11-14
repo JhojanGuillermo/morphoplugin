@@ -29,10 +29,10 @@
             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         </config-file>
 
-        <edit-config file="AndroidManifest.xml" target="/manifest/uses-sdk" mode="merge">
+        <edit-config target="AndroidManifest.xml" parent="/manifest/uses-sdk" mode="merge">
             <uses-sdk android:minSdkVersion="19" android:maxSdkVersion="28" />
         </edit-config>
-        <edit-config file="AndroidManifest.xml" target="/*">
+        <edit-config target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="android.permission.USB_PERMISSION" />
             <uses-permission android:name="android.permission.USE_FINGERPRINT" />
             <uses-permission android:name="android.permission.USE_BIOMETRIC" />
